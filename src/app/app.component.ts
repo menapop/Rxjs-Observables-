@@ -14,5 +14,11 @@ export class AppComponent implements OnInit {
       error: (error) => console.log(error),
       complete: () => console.log('stream is completed '),
     });
+
+    from([10, 20, 30]).subscribe({
+      next: (item) => console.log(item),
+      error: (error) => console.log(error),
+      complete: () => console.log('stream is completed '),
+    });
   }
 }
